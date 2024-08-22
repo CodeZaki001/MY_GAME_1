@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Text on Click</title>
+    <style>
+        .hidden-text {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .text-box {
+            padding: 10px;
+            border: 1px solid #000;
+            cursor: pointer;
+            width: 300px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+     
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: block;
+            margin-bottom: 300px;
+        }
+   
+    </style>
+</head>
+<body>
+    <h1>GUESS THE ETHNICITY</h1>
+<div class="text-box" onclick="revealText('text')">ANSWER</div>
+<div id="text" class="hidden-text">Philippines</div>
+<img src="https://pbs.twimg.com/profile_images/1531212570614714368/Ne2YxJMv_400x400.jpg" height="700" width="700">
+
+<div class="text-box" onclick="revealText('text1')">ANSWER</div>
+<div id="text1" class="hidden-text">RUSSIAN</div>
+<img src="https://i.ytimg.com/vi/3XhPCrfDP1g/oar2.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLANQ3jvR5hhVORSdtQUt2EcrRzi6A" height="1000" width="700">
+
+<div class="text-box" onclick="revealText('text2')">ANSWER</div>
+<div id="text2" class="hidden-text">Hong Kong</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Bruce_Lee_1973.jpg" height="1000" width="700">
+
+<div class="text-box" onclick="revealText('text3')">ANSWER</div>
+<div id="text3" class="hidden-text">CANADA</div>
+<img src="https://hips.hearstapps.com/hmg-prod/images/drake_photo_by_prince_williams_wireimage_getty_479503454.jpg?crop=1xw:1.0xh;center,top&resize=640:*" height="700" width="700">
+
+
+
+<script>
+    function revealText(textId) {
+        var textElement = document.getElementById(textId);
+        if (textElement.style.display === "none" || textElement.style.display === "") {
+            textElement.style.display = "block";
+        } else {
+            textElement.style.display = "none";
+        }
+    }
+</script>
+
+
+</body>
+</html>
